@@ -18,7 +18,7 @@ export default function Home() {
 
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-                <link rel="stylesheet" href="./home-bootstrap.css" />
+                <link rel="stylesheet" href="../css/bootstrap.css" />
 
 
                 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
