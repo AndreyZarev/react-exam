@@ -19,13 +19,13 @@ export default function Home() {
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
                 <link rel="stylesheet" href="../css/bootstrap.css" />
-
+                <link rel="stylesheet" href="../css/responsive.css" />
+                <link rel="stylesheet" href="../css/style.css" />
+                <link rel="stylesheet" href="../css/style.scss" />
 
                 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
 
-                <link href="css/style.css" rel="stylesheet" />
 
-                <link href="css/responsive.css" rel="stylesheet" />
             </head>
 
             <body>
