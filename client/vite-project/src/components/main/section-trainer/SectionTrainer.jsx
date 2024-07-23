@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Trainers from "./Trainers";
+import Trainers from "./trainers/Trainers";
 
 
 export default function SectionTrainer() {
@@ -12,15 +12,14 @@ export default function SectionTrainer() {
         (async () => {
             const response = await fetch(`${baseUrl}/phonebook`)
             const data = await response.json()
+            const result = (Object.values(data))
+            return setTrainers(result)
 
 
-            const result = Object.values(data)
-            console.log(result);
 
 
-            setTrainers(result)
+
         })()
-
     }, []);
 
 
@@ -32,7 +31,7 @@ export default function SectionTrainer() {
                 <div className="heading_container">
                     <h2>Our Gym Trainers</h2>
                 </div>
-                {trainers.map(trainer => <Trainers key={trainer._id} name={trainer.person} phone={trainer.phone} />
+                {trainers.map(trainer => <Trainers key={trainer._id} {...trainer} />
                 )}
 
             </div>
