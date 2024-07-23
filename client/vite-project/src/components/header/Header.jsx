@@ -32,7 +32,7 @@ export default function Header() {
 
                                                 <NavLink className="nav-link"
                                                     style={
-                                                        ({ isActive }) => isActive ? { "border-bottom": "solid red 3px" } : {}
+                                                        ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
                                                     }
                                                     to="/">
                                                     Home
@@ -41,7 +41,7 @@ export default function Header() {
                                             <li className="nav-item ">
                                                 <NavLink className="nav-link"
                                                     style={
-                                                        ({ isActive }) => isActive ? { "border-bottom": "solid red 3px" } : {}
+                                                        ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
                                                     }
                                                     to="/why-us">
                                                     Why Us
@@ -59,7 +59,7 @@ export default function Header() {
                                             <li className="nav-item">
                                                 <NavLink className="nav-link"
                                                     style={
-                                                        ({ isActive }) => isActive ? { "border-bottom": "solid red 3px" } : {}
+                                                        ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
                                                     }
                                                     to="/contact-us">
                                                     Contact Us
