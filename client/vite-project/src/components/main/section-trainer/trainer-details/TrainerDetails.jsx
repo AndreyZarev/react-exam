@@ -4,18 +4,22 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
+import "./trainers.css"
+
 export default function TrainerDetails() {
     const baseUrl = 'http://localhost:3030/jsonstore'
     const { trainerid } = useParams()
     const [trainerDetails, setTrainerDetails] = useState({});
 
     useEffect(() => {
-
         (async () => {
             const response = await fetch(`${baseUrl}/trainers/${trainerid}`)
+
+
             const data = await response.json()
-            console.log(data);
+
             const result = (Object.values(data))
+
             return setTrainerDetails(result)
 
 
@@ -28,28 +32,43 @@ export default function TrainerDetails() {
 
 
     return (
-        <div className="row">
-            <div className="col-lg-4 col-md-6 mx-auto">
-                <div className="box">
-                    <div className="name">
-                        <h5>{trainerDetails.person}</h5>
-                    </div>
-                    <div className="img-box">
-                        <img src="images/t1.jpg" alt="" />
-                    </div>
-                    <div className="social_box">
-                        <p>{trainerDetails.phone}</p>
-                    </div>
-                    <button>
 
-                        <Link to="/trainers/details:trainerid" >
-                            Details
-                        </Link>                    </button>
+        <div className="row-container">
+            <div className="">
+
+
+                <div className="name">
+                    <h3>{trainerDetails[1]}</h3>
                 </div>
+                <div className="img-box">
+                    <img src={trainerDetails[0]} alt="" />
+                </div>
+                <div className="phone">
+                    <h5>Phone:</h5>
+                    <p>{trainerDetails[2]}</p>
+                </div>
+
+                <div className="experience">
+                    <h5>Experience:</h5>
+                    <p>{trainerDetails[4]}</p>
+                </div>
+                <div className="achievements">
+                    <h5>Achievements:</h5>
+                    <p>{trainerDetails[5]}</p>
+                </div>
+                <button>
+
+                    <Link to="/trainers" >
+                        Back
+                    </Link>                    </button>
+
             </div>
 
 
+
+
         </div>
+
 
     )
 }
