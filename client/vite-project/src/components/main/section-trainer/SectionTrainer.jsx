@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Trainers from "./trainers/Trainers";
 
-
+import "./trainer-section.css"
 export default function SectionTrainer() {
     const baseUrl = 'http://localhost:3030/jsonstore'
 
@@ -10,7 +10,7 @@ export default function SectionTrainer() {
     useEffect(() => {
 
         (async () => {
-            const response = await fetch(`${baseUrl}/phonebook`)
+            const response = await fetch(`${baseUrl}/trainers`)
             const data = await response.json()
             const result = (Object.values(data))
             return setTrainers(result)
@@ -26,15 +26,16 @@ export default function SectionTrainer() {
 
     return (
 
-        <section className="trainer_section layout_padding">
-            <div className="container">
-                <div className="heading_container">
-                    <h2>Our Gym Trainers</h2>
-                </div>
+        <section className="trainer-section">
+            <div className="heading-container">
+                <h2>Our Gym Trainers</h2>
+            </div>
+            <div className="flex-container">
                 {trainers.map(trainer => <Trainers key={trainer._id} {...trainer} />
                 )}
-
             </div>
+
+
         </section>
 
     )
