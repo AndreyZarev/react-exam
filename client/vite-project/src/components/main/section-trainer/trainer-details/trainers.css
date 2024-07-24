@@ -1,0 +1,14 @@
+.row-container {
+    display: flex;
+    margin: auto;
+
+}
+
+img {
+    width: 20em;
+    height: 20em;
+}
+
+.row {
+    margin: auto;
+}
