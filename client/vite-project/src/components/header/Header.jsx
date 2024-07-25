@@ -1,5 +1,5 @@
 
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 const baseUrl = "http://localhost:3030/jsonstore"
 
 export default function Header() {
@@ -33,9 +33,9 @@ export default function Header() {
                     <header className="header_section">
                         <div className="container-fluid">
                             <nav className="navbar navbar-expand-lg custom_nav-container ">
-                                <a className="navbar-brand" href="index.html">
+                                <Link to="/">
                                     <span>Neogym</span>
-                                </a>
+                                </Link>
                                 <button
                                     className="navbar-toggler"
                                     type="button"
@@ -83,19 +83,28 @@ export default function Header() {
                                                     style={
                                                         ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
                                                     }
-                                                    to="/contact-us">
-                                                    Contact Us
+                                                    to="/register">
+                                                    Register
                                                 </NavLink>
                                             </li>
+                                            <li className="nav-item">
+                                                <NavLink className="nav-link"
+                                                    style={
+                                                        ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
+                                                    }
+                                                    to="/login">
+                                                    Login
+                                                </NavLink>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+
+                                                    to="/logout">
+                                                    Logout
+                                                </Link>
+                                            </li>
                                         </ul>
-                                        <div className="user_option">
-                                            <form className="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                                <button
-                                                    className="btn  my-2 my-sm-0 nav_search-btn"
-                                                    type="submit"
-                                                ></button>
-                                            </form>
-                                        </div>
+
                                     </div>
                                 </div>
                             </nav>
