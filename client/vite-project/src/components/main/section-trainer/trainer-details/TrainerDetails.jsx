@@ -5,15 +5,16 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
 import "./trainers.css"
+import * as api from "../../../api/api-links"
 
 export default function TrainerDetails() {
-    const baseUrl = 'http://localhost:3030/jsonstore'
+    const base = api.baseUrl
     const { trainerid } = useParams()
     const [trainerDetails, setTrainerDetails] = useState({});
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${baseUrl}/trainers/${trainerid}`)
+            const response = await fetch(`${base}/trainers/${trainerid}`)
 
 
             const data = await response.json()
