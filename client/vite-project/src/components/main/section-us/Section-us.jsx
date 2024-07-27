@@ -1,9 +1,11 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
+
 
 import * as api from "../../api/api-links"
 import SectionUsArticle from "./Section-us-article"
-import styles from "./section-us-article.module.css"
+import style from "./section-us.module.css"
 
 export default function SectionUs() {
     const [request, setRequest] = useState([])
@@ -21,21 +23,20 @@ export default function SectionUs() {
 
 
     return (
-        < section className={styles.section} >
+        < section className={style.section} >
 
             <div className="heading_container">
                 <h2>Why Choose Us</h2>
             </div>
-            <div className={styles.us_container}>
+            <div className={style.us_container}>
 
                 {request.map(data => <SectionUsArticle key={data._id} {...data} />
                 )}
 
 
-
-
-
             </div>
+            <Link to="/register" className={style.link}>Register</Link>
+
         </section >
 
     )
