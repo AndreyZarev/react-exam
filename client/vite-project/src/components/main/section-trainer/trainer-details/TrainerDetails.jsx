@@ -42,7 +42,7 @@ export default function TrainerDetails() {
                     <h3>{trainerDetails[1]}</h3>
                 </div>
                 <div className="img-box">
-                    <img src={trainerDetails[0]} alt="" />
+                    <img className="img" src={trainerDetails[0]} alt="" />
                 </div>
                 <div className="phone">
                     <h5>Phone:</h5>
