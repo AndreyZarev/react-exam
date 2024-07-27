@@ -12,10 +12,10 @@ export default function SectionUsArticle({
 
         < div className={styles.row} >
 
-            <div className="img-box">
-                <img src={img} alt="" />
+            <div >
+                <img className={styles.images} src={img} alt="" />
             </div>
-            <div className="detail-box">
+            <div className={styles.details}>
                 <h5>{title}</h5>
                 <p>
                     {text}
