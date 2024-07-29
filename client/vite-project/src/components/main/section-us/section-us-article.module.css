@@ -1,13 +1,14 @@
-.section {
-    padding: 10em;
-}
-
-.us_container {
-    display: flex;
-    box-sizing: border-box;
-}
-
 .row {
     margin: 2em;
-    min-height: 200px;
+
+}
+
+.images {
+    width: 27em;
+    height: 25em;
+
+}
+
+.details {
+    padding: 1em;
 }
