@@ -1,21 +1,28 @@
 import { useEffect } from 'react'
-
-import { login } from '../../api/api-links'
-
+import { useNavigate } from 'react-router-dom';
 
 
-async function loginHandler(email, password) {
-
+import { useLogin } from '../../hooks/useAuth';
+import { useFrom } from '../../hooks/useForm';
 
 
 
-    const result = await login(email, password)
-
-}
 
 export default function SectionLogin() {
-    const email = ""
-    const password = ""
+    const login = useLogin();
+    const navigate = useNavigate();
+    const { values, changeHandler, submitHandler } = useFrom(
+        { email: '', password: '' },
+        async (email, password) => {
+            try {
+                login(email, password)
+                navigate('/')
+            } catch (err) {
+                console.log(err.message);
+            }
+        }
+
+    )
 
     return (
         <section className="contact_section ">
@@ -29,20 +36,24 @@ export default function SectionLogin() {
                     <div className="col-lg-5 col-md-6">
                         <div className="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
                             <div className="heading_container">
-                                <h2>Contact Us</h2>
+                                <h2>Login</h2>
                             </div>
-                            <form action="" onSubmit={loginHandler(email, password)}>
+                            <form className='login-form' onSubmit={submitHandler} >
 
                                 <div>
-                                    <input type="email" placeholder="Email"
-                                        name={email.value} />
+                                    <input type="email"
+                                        name='email'
+                                        value={values.email}
+                                        onChange={changeHandler} />
                                 </div>
 
                                 <div>
                                     <input
                                         type="password"
+                                        name="password"
                                         className="password"
-                                        name={password.value}
+                                        value={values.password}
+                                        onChange={changeHandler}
 
                                     />
                                 </div>
