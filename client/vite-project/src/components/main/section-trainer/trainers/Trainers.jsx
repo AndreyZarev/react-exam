@@ -17,7 +17,7 @@ export default function Trainers({
                     <h5>{person}</h5>
                 </div>
                 <div className="img-box">
-                    <img src={img} alt="" />
+                    <img className="img" src={img} alt="" />
                 </div>
                 <div className="social_box">
                     <p>{phone}</p>
