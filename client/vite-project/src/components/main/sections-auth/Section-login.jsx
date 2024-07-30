@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { useLogin } from '../../hooks/useAuth';
-import { useFrom } from '../../hooks/useForm';
+import { useForm } from '../../hooks/useForm';
 
 
 
@@ -11,7 +11,7 @@ import { useFrom } from '../../hooks/useForm';
 export default function SectionLogin() {
     const login = useLogin();
     const navigate = useNavigate();
-    const { values, changeHandler, submitHandler } = useFrom(
+    const { values, changeHandler, submitHandler } = useForm(
         { email: '', password: '' },
         async (email, password) => {
             try {
