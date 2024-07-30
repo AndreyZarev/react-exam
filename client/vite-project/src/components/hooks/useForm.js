@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function useFrom(initialValues, submitCallback) {
+export function useForm(initialValues, submitCallback) {
     const [values, setValues] = useState(initialValues)
 
     const changeHandler = (e) => {
