@@ -1,10 +1,40 @@
-import { useEffect } from 'react'
+import { useNavigate } from "react-router-dom";
+import { useForm } from "../../hooks/useForm"
+import { useRegister } from "../../hooks/useAuth";
+import { useState } from "react";
 
-import { login } from '../../api/api-links'
-
+const initialValues = { email: '', password: '', rePassword: '' };
 
 export default function SectionRegister() {
+    const [error, setError] = useState("")
+    const register = useRegister();
+    const navigate = useNavigate();
 
+    const registerHandler = async (values) => {
+        if (values.password !== values.rePassword) {
+
+            console.log("Passwords do not match!");
+            return setError("Passwords do not match!")
+
+        }
+
+
+        try {
+            await register(values.email, values.password)
+
+            navigate('/')
+        } catch (err) {
+            console.log(err.message);
+        }
+
+    }
+
+
+    const {
+        values,
+        changeHandler,
+        submitHandler
+    } = useForm(initialValues, registerHandler)
 
     return (
         <section className="contact_section ">
@@ -18,27 +48,43 @@ export default function SectionRegister() {
                     <div className="col-lg-5 col-md-6">
                         <div className="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
                             <div className="heading_container">
-                                <h2>Contact Us</h2>
+                                <h2>Register</h2>
                             </div>
-                            <form action="">
+                            <form className='login-form' onSubmit={submitHandler} >
+                                <label htmlFor="email">Email:</label>
+
                                 <div>
-                                    <input type="text" placeholder="Name" />
+                                    <input type="email"
+                                        name='email'
+                                        value={values.email}
+                                        onChange={changeHandler} />
                                 </div>
-                                <div>
-                                    <input type="email" placeholder="Email" />
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Phone Number" />
-                                </div>
+                                <label htmlFor="password">Password:</label>
+
                                 <div>
                                     <input
-                                        type="text"
-                                        className="message-box"
-                                        placeholder="Message"
+                                        type="password"
+                                        name="password"
+                                        className="password"
+                                        value={values.password}
+                                        onChange={changeHandler}
+
+                                    />
+                                </div>
+                                <label htmlFor="rePassword">Repeat Password:</label>
+                                <div>
+
+                                    <input
+                                        type="password"
+                                        name="rePassword"
+                                        className="rePassword"
+                                        value={values.rePassword}
+                                        onChange={changeHandler}
+
                                     />
                                 </div>
                                 <div className="d-flex ">
-                                    <button>Send</button>
+                                    <button >Send</button>
                                 </div>
                             </form>
                         </div>
@@ -46,7 +92,6 @@ export default function SectionRegister() {
                 </div>
             </div>
         </section>
-
 
     )
 }
