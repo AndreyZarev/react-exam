@@ -15,6 +15,8 @@ import SectionFooter from "./components/zfooter/Section-footer";
 import SectionRegister from './components/main/sections-auth/Section-register';
 import TrainerDetails from './components/main/section-trainer/trainer-details/TrainerDetails';
 import SectionLogin from './components/main/sections-auth/Section-login';
+import CreateOfferForm from './components/main/section-trainer/create-offer/CreateOfferForm';
+
 import { AuthContext } from './components/contexts/Auth-context';
 
 
@@ -51,7 +53,7 @@ function App() {
             <Route path="/healty" element={<SectionHealty />} />
             <Route path="/register" element={< SectionRegister />} />
             <Route path="/login" element={< SectionLogin />} />
-            <Route path="/create-post" element={< SectionLogin />} />
+            <Route path="/create-offer" element={< CreateOfferForm />} />
             <Route path="/logout" element={< SectionTrainer />} />
           </Routes>
           <SectionFooter />
