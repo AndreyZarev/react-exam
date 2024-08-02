@@ -6,16 +6,16 @@ import { AuthContext } from "../contexts/Auth-context";
 
 
 export const useLogin = () => {
+
     const { changeAuthState } = useContext(AuthContext)
+
     const loginHandler = async (email, password) => {
 
-        try {
-            const result = await login(email, password);
-            changeAuthState(result)
-            console.log(result);
-        } catch (err) {
-            console.log(err);
-        }
+        const result = await login(email, password);
+
+        changeAuthState(result)
+
+
         return result
 
     }
@@ -28,7 +28,6 @@ export const useRegister = () => {
     const { changeAuthState } = useContext(AuthContext)
 
     const registerHandler = async (email, password) => {
-
 
         const result = await register(email, password);
 
