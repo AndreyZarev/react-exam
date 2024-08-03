@@ -10,10 +10,11 @@ export default function SectionRegister() {
     const register = useRegister();
     const navigate = useNavigate();
 
+
+
     const registerHandler = async (values) => {
         if (values.password !== values.rePassword) {
 
-            console.log("Passwords do not match!");
             return setError("Passwords do not match!")
 
         }
@@ -24,7 +25,7 @@ export default function SectionRegister() {
 
             navigate('/')
         } catch (err) {
-            console.log(err.message);
+            setError(err.message)
         }
 
     }
@@ -49,6 +50,7 @@ export default function SectionRegister() {
                         <div className="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
                             <div className="heading_container">
                                 <h2>Register</h2>
+                                <h4 className="errorMessage" style={{ color: "red" }}>{error}</h4>
                             </div>
                             <form className='login-form' onSubmit={submitHandler} >
                                 <label htmlFor="email">Email:</label>
