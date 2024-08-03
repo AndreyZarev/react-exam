@@ -4,11 +4,13 @@
 }
 
 .images {
-    width: 27em;
+    width: 25em;
     height: 25em;
 
 }
 
 .details {
     padding: 1em;
+    max-width: 25em;
+    ;
 }
