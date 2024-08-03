@@ -1,8 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { useNavigate } from "react-router-dom"
 
 
+
+import { AuthContext } from "../../contexts/Auth-context"
 import * as api from "../../api/api-links"
 import SectionUsArticle from "./Section-us-article"
 import style from "./section-us.module.css"
@@ -10,7 +14,15 @@ import style from "./section-us.module.css"
 export default function SectionUs() {
     const [request, setRequest] = useState([])
     const base = api.baseUrl
+    const { isAuthenticated } = useContext(AuthContext)
+    const navigate = useNavigate()
 
+    function register() {
+        navigate("/register")
+    }
+    function createOffer() {
+        navigate("/create-offer")
+    }
     useEffect(() => {
         (async () => {
             const getRequest = await fetch(`${base}/why-us`)
@@ -35,8 +47,17 @@ export default function SectionUs() {
 
 
             </div>
-            <Link to="/register" className={style.link}>Register</Link>
 
+            {isAuthenticated
+                ? (
+
+                    <button onClick={createOffer}>Create Post</button>
+                )
+                : (
+                    <button onClick={register}>Register</button>
+                )
+
+            }
         </section >
 
     )
