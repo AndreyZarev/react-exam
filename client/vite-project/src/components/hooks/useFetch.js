@@ -39,23 +39,26 @@ export const register = async (email, password) => {
 
 
 
-export const create = async (img, person, experience, achievments) => {
+export async function create(img, title, text) {
 
-    return console.log(img, person, experience, achievments);
-    // const authData = await fetch("http://localhost:3030/users/register", {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ email, password }),
-    // });
-    // const awaitedData = await authData.json();
-    // if (!authData.ok) {
+    if (!img || !title || !text) {
+        return
+    }
+    console.log({ img, title, text });
+    const authData = await fetch("http://localhost:3030/data/why-us", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ img, title, text }),
+    });
+    const awaitedData = await authData.json();
+    if (!authData.ok) {
 
-    //     throw awaitedData
+        throw awaitedData
 
-    // }
+    }
 
 
-    // return awaitedData
+    return awaitedData
 }
