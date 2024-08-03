@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
+
 import Trainers from "./trainers/Trainers";
 
 import "./trainer-section.css"
@@ -35,7 +37,7 @@ export default function SectionTrainer() {
                 )}
             </div>
 
-
+            <Link to="/register" className='link-register'>Register</Link>
         </section>
 
     )
