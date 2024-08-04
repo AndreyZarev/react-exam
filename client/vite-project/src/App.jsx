@@ -16,7 +16,7 @@ import TrainerDetails from './components/main/section-trainer/trainer-details/Tr
 import SectionLogin from './components/main/sections-auth/Section-login';
 import CreateOfferForm from './components/main/section-trainer/create-offer/CreateOfferForm';
 
-import { AuthContextProvider } from './components/contexts/Auth-context';
+import { AuthContextProvider } from './contexts/Auth-context';
 
 
 function App() {
