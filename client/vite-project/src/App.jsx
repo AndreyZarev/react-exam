@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from "react-router-dom"
 import { useParams } from 'react-router-dom';
@@ -17,29 +16,19 @@ import TrainerDetails from './components/main/section-trainer/trainer-details/Tr
 import SectionLogin from './components/main/sections-auth/Section-login';
 import CreateOfferForm from './components/main/section-trainer/create-offer/CreateOfferForm';
 
-import { AuthContext } from './components/contexts/Auth-context';
+import { AuthContextProvider } from './components/contexts/Auth-context';
 
 
 function App() {
 
 
-  const [authState, setAuthState] = useState({})
 
-  const changeAuthState = (state) => {
-    setAuthState(state)
-  };
 
-  const contextData = {
-    userId: authState.userId,
-    email: authState.email,
-    accessToken: authState.acessToken,
-    isAuthenticated: !!authState.email,
-    changeAuthState
-  }
+
 
 
   return (
-    <AuthContext.Provider value={contextData}>
+    <AuthContextProvider>
 
       <>
         <div>
@@ -60,7 +49,7 @@ function App() {
 
         </div>
       </>
-    </AuthContext.Provider>
+    </AuthContextProvider>
 
   )
 }
