@@ -1,10 +1,19 @@
 
+const headers = {
+    'Content-Type': 'application/json',
+};
+
+const accessToken = localStorage.getItem('accessToken');
+// Conditionally add the Authorization header if accessToken is present
+if (accessToken) {
+    headers['Authorization'] = accessToken;
+}
+
+
 export const login = async (email, password) => {
     const authData = await fetch("http://localhost:3030/users/login", {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        headers: headers,
         body: JSON.stringify({ email, password }),
     });
     const awaitedData = await authData.json()
