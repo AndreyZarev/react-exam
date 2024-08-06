@@ -12,16 +12,29 @@ const initialValues = { img: '', name: "", text: '' };
 export default function CreateOfferForm() {
     const { isAuthenticated } = useContext(AuthContext)
     const { email } = useContext(AuthContext)
-
-    const [error, setError] = useState("")
+    const { accessToken } = useContext(AuthContext)
     const navigate = useNavigate();
+    const [error, setError] = useState("")
+    const headers = {
+        'Content-Type': 'application/json',
+    };
+
+
+
+
+    if (accessToken) {
+        headers['X-Authorization'] = accessToken;
+    }
+
+
+
     if (!isAuthenticated) {
         navigate("/login")
     }
     async function createFunction(values) {
 
         try {
-            await create(values.img, values.title, values.text, email)
+            await create(values.img, values.title, values.text, email, headers)
             navigate('/why-us')
         } catch (err) {
             setError(err.message);
