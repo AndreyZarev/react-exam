@@ -18,6 +18,7 @@ import CreateOfferForm from './components/main/create-offer/CreateOfferForm';
 
 import { AuthContextProvider } from './contexts/Auth-context';
 import Logout from './components/main/sections-auth/Section-logout';
+import Edit from './components/main/edit/Edit';
 
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
             <Route path="/trainers" element={< SectionTrainer />} />
             <Route path="/trainers/:trainerid" element={< TrainerDetails />} />
             <Route path="/why-us" element={<SectionUs />} />
+            <Route path="/why-us/edit/:postid" element={<Edit />} />
+
             <Route path="/healty" element={<SectionHealty />} />
             <Route path="/register" element={< SectionRegister />} />
             <Route path="/login" element={< SectionLogin />} />
