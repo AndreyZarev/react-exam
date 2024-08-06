@@ -1,12 +1,13 @@
 
 
 
+import { useState } from "react";
 import SectionInfo from "../section-info/SectionInfo";
 
 
 
-
 export default function Home() {
+
     return (
         <>
 
