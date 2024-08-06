@@ -1,8 +1,8 @@
 
 import { NavLink, Link } from "react-router-dom"
+import { useState, useEffect } from "react"
 import { useContext } from "react"
-
-import { AuthContext } from "../contexts/Auth-context"
+import { AuthContext } from "../../contexts/Auth-context"
 import "./header.css"
 
 
@@ -12,7 +12,9 @@ import "./header.css"
 
 
 export default function Header() {
+
     const { isAuthenticated } = useContext(AuthContext)
+
     return (
         <>
 
