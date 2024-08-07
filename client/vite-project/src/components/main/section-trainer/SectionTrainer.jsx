@@ -37,7 +37,7 @@ export default function SectionTrainer() {
                 )}
             </div>
 
-            <Link to="/register" className='link-register'>Register</Link>
+
         </section>
 
     )
