@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
 import "./trainers.css"
-import * as api from "../../../api/api-links"
+import * as api from "../../../../api/api-links"
 
 export default function TrainerDetails() {
     const base = api.baseUrl
@@ -33,43 +33,48 @@ export default function TrainerDetails() {
 
 
     return (
-
-        <div className="row-container">
-            <div className="">
-
-
-                <div className="name">
-                    <h3>{trainerDetails[1]}</h3>
-                </div>
-                <div className="img-box">
-                    <img className="img" src={trainerDetails[0]} alt="" />
-                </div>
-                <div className="phone">
-                    <h5>Phone:</h5>
-                    <p>{trainerDetails[2]}</p>
-                </div>
-
-                <div className="experience">
-                    <h5>Experience:</h5>
-                    <p>{trainerDetails[4]}</p>
-                </div>
-                <div className="achievements">
-                    <h5>Achievements:</h5>
-                    <p>{trainerDetails[5]}</p>
-                </div>
-                <button>
-
-                    <Link to="/trainers" >
-                        Back
-                    </Link>                    </button>
-
+        <section className="trainer-section">
+            <div className="heading-container">
+                <h2>One of our Gym Trainers</h2>
             </div>
+            <div className="flex-container">
+                <div className="row-container">
+                    <div className="">
+
+
+                        <div className="name">
+                            <h3>{trainerDetails[1]}</h3>
+                        </div>
+                        <div className="img-box">
+                            <img className="img" src={trainerDetails[0]} alt="" />
+                        </div>
+                        <div className="phone">
+                            <h5>Phone:</h5>
+                            <p>{trainerDetails[2]}</p>
+                        </div>
+
+                        <div className="experience">
+                            <h5>Experience:</h5>
+                            <p>{trainerDetails[4]}</p>
+                        </div>
+                        <div className="achievements">
+                            <h5>Achievements:</h5>
+                            <p>{trainerDetails[5]}</p>
+                        </div>
+                        <button>
+
+                            <Link to="/trainers" >
+                                Back
+                            </Link>                    </button>
+
+                    </div>
 
 
 
 
-        </div>
-
+                </div>
+            </div>
+        </section>
 
     )
 }
