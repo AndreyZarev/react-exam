@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
+import { useContext } from "react"
 
+import { AuthContext } from "../../../../contexts/Auth-context"
 import "../trainer-details/trainers.css"
 export default function Trainers({
     img,
@@ -8,6 +10,8 @@ export default function Trainers({
     phone
 }
 ) {
+
+    const { isAuthenticated } = useContext(AuthContext)
     return (
 
         <div className="row">
@@ -22,11 +26,34 @@ export default function Trainers({
                 <div className="social_box">
                     <p>{phone}</p>
                 </div>
-                <button>
 
-                    <Link to={`/trainers/${_id}`} >
-                        Details
-                    </Link>                    </button>
+                {isAuthenticated
+                    ?
+                    <button>
+
+                        <Link to={`/trainers/${_id}`} >
+                            Details
+                        </Link>
+                    </button>
+                    :
+                    (
+                        <div>
+                            <button>
+
+                                <Link to={`/login`} >
+                                    Login
+                                </Link>
+                            </button>
+
+                            <button>
+
+                                <Link to={`/register`} >
+                                    Register
+                                </Link>
+                            </button>
+
+                        </div>)
+                }
             </div>
 
 
