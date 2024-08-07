@@ -11,7 +11,9 @@ export default function TrainerDetails() {
     const base = api.baseUrl
     const { trainerid } = useParams()
     const [trainerDetails, setTrainerDetails] = useState({});
+    const likeFunction = async () => {
 
+    }
     useEffect(() => {
         (async () => {
             const response = await fetch(`${base}/trainers/${trainerid}`)
@@ -61,11 +63,21 @@ export default function TrainerDetails() {
                             <h5>Achievements:</h5>
                             <p>{trainerDetails[5]}</p>
                         </div>
+
+                        <div className="achievements">
+                            <h5>Likes:</h5>
+                            <p>{trainerDetails[6]}</p>
+                        </div>
                         <button>
 
                             <Link to="/trainers" >
                                 Back
                             </Link>                    </button>
+                        <button onClick={likeFunction()}>
+
+
+                            Like
+                        </button>
 
                     </div>
 
