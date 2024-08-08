@@ -79,7 +79,7 @@ export default function CreateOfferForm() {
                                             value={values.img}
                                             onChange={changeHandler} />
                                     </div>
-                                    <label htmlFor="title">Name:</label>
+                                    <label htmlFor="title">Title:</label>
 
                                     <div>
                                         <input
