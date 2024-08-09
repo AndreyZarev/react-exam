@@ -34,26 +34,26 @@ function App() {
     <AuthContextProvider>
 
       <>
-        <div>
 
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/trainers" element={< SectionTrainer />} />
-            <Route path="/trainers/:trainerid" element={< TrainerDetails />} />
-            <Route path="/why-us" element={<SectionUs />} />
-            <Route path="/why-us/edit/:postid" element={<Edit />} />
-            <Route path="/why-us/delete/:postid" element={<DeletePost />} />
 
-            <Route path="/healty" element={<SectionHealty />} />
-            <Route path="/register" element={< SectionRegister />} />
-            <Route path="/login" element={< SectionLogin />} />
-            <Route path="/create-offer" element={< CreateOfferForm />} />
-            <Route path="/logout" element={< Logout />} />
-          </Routes>
-          <SectionFooter />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/trainers" element={< SectionTrainer />} />
+          <Route path="/trainers/:trainerid" element={< TrainerDetails />} />
+          <Route path="/why-us" element={<SectionUs />} />
+          <Route path="/why-us/edit/:postid" element={<Edit />} />
+          <Route path="/why-us/delete/:postid" element={<DeletePost />} />
 
-        </div>
+          <Route path="/healty" element={<SectionHealty />} />
+          <Route path="/register" element={< SectionRegister />} />
+          <Route path="/login" element={< SectionLogin />} />
+          <Route path="/create-offer" element={< CreateOfferForm />} />
+          <Route path="/logout" element={< Logout />} />
+        </Routes>
+        <SectionFooter />
+
+
       </>
     </AuthContextProvider>
 
