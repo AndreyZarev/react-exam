@@ -1,0 +1,11 @@
+.paragraph {
+    font-size: 1.3em;
+    color: rgb(55, 69, 223);
+    font-weight: 700;
+
+}
+
+.container {
+    margin: 0 40%;
+    display: block;
+}
