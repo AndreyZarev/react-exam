@@ -1,0 +1,15 @@
+.footer {
+    background-color: rgb(82, 243, 255);
+    padding: 5em 5em 0 5em;
+    margin-top: 10em;
+    margin-bottom: 0;
+
+
+}
+
+.copyRight {
+    font-weight: 500;
+    padding-top: 5em;
+    display: block;
+    margin: 0 auto;
+}
