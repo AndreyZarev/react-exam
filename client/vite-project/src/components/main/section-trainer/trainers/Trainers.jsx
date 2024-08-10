@@ -3,7 +3,7 @@ import { useContext } from "react"
 
 import style from "./trainers.module.css"
 import { AuthContext } from "../../../../contexts/Auth-context"
-import "../trainer-details/trainers.css"
+
 export default function Trainers({
     img,
     _id,
