@@ -5,6 +5,10 @@
 
 }
 
+.span {
+    color: black;
+}
+
 .container {
     margin: 0 40%;
     display: block;
