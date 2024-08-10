@@ -42,7 +42,6 @@ export default function TrainerDetails() {
             const data = await response.json()
 
             const result = (Object.values(data))
-            console.log(result);
             return setTrainerDetails(result)
 
 
@@ -71,20 +70,20 @@ export default function TrainerDetails() {
                         <div className="name">
                             <h3 className={style.name}>{trainerDetails[1]}</h3>
                         </div>
-                        <div className="img-box">
-                            <img className={style.img} src={trainerDetails[0]} alt="" />
-                        </div>
+
+                        <img className={style.img} src={trainerDetails[0]} alt="" />
+
                         <div className="phone">
-                            <h5>Phone:</h5>
+                            <h3>Phone:</h3>
                             <p>{trainerDetails[2]}</p>
                         </div>
 
                         <div className="experience">
-                            <h5>Experience:</h5>
+                            <h3>Experience:</h3>
                             <p>{trainerDetails[4]}</p>
                         </div>
                         <div className="achievements">
-                            <h5>Achievements:</h5>
+                            <h3>Achievements:</h3>
                             <p>{trainerDetails[5]}</p>
                         </div>
 
