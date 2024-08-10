@@ -8,7 +8,7 @@
     border: 10px solid black;
     height: 26em;
     width: 26em;
-    margin: 0 1em;
+
 }
 
 .container {
@@ -23,6 +23,7 @@
 .name {
     text-align: center;
     padding: 1em;
+    font-size: 2em;
 }
 
 .row {
