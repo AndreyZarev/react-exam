@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react"
 
+import style from "./trainers.module.css"
 import { AuthContext } from "../../../../contexts/Auth-context"
 import "../trainer-details/trainers.css"
 export default function Trainers({
@@ -14,22 +15,19 @@ export default function Trainers({
     const { isAuthenticated } = useContext(AuthContext)
     return (
 
-        <div className="row">
+        <div className={style.row}>
 
-            <div className="box">
+            <div className={style.box}>
                 <div className="name">
-                    <h5>{person}</h5>
+                    <h2 className={style.name}>{person}</h2>
                 </div>
                 <div className="img-box">
-                    <img className="img" src={img} alt="" />
-                </div>
-                <div className="social_box">
-                    <p>{phone}</p>
+                    <img className={style.img} src={img} alt="" />
                 </div>
 
                 {isAuthenticated
                     ?
-                    <button>
+                    <button className={style.details}>
 
                         <Link to={`/trainers/${_id}`} >
                             Details
@@ -37,15 +35,15 @@ export default function Trainers({
                     </button>
                     :
                     (
-                        <div>
-                            <button>
+                        <div className={style.btnDiv}>
+                            <button className={style.details}>
 
                                 <Link to={`/login`} >
                                     Login
                                 </Link>
                             </button>
 
-                            <button>
+                            <button className={style.details}>
 
                                 <Link to={`/register`} >
                                     Register

@@ -30,7 +30,7 @@ export default function SectionTrainer() {
 
         <section className="trainer-section">
             <div className="heading-container">
-                <h2>Our Gym Trainers</h2>
+                <h2 className="ourGym">Our Gym Trainers</h2>
             </div>
             <div className="flex-container">
                 {trainers.map(trainer => <Trainers key={trainer._id} {...trainer} />
