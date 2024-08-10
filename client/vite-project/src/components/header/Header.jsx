@@ -63,8 +63,8 @@ export default function Header() {
                                                 style={
                                                     ({ isActive }) => isActive ? { "borderBottom": "solid red 3px" } : {}
                                                 }
-                                                to="/create-offer">
-                                                Create Offer
+                                                to="/create-post">
+                                                Create Post
                                             </NavLink>
                                         </li>
                                         <li className="nav-item logout">

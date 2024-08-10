@@ -14,12 +14,12 @@ import SectionFooter from "./components/zfooter/Section-footer";
 import SectionRegister from './components/main/sections-auth/Section-register';
 import TrainerDetails from './components/main/section-trainer/trainer-details/TrainerDetails';
 import SectionLogin from './components/main/sections-auth/Section-login';
-import CreateOfferForm from './components/main/create-offer/CreateOfferForm';
 
 import { AuthContextProvider } from './contexts/Auth-context';
 import Logout from './components/main/sections-auth/Section-logout';
 import Edit from './components/main/edit/Edit';
 import DeletePost from './components/main/delete/Delete';
+import CreatePost from './components/main/create-offer/CreatePost';
 
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
           <Route path="/healty" element={<SectionHealty />} />
           <Route path="/register" element={< SectionRegister />} />
           <Route path="/login" element={< SectionLogin />} />
-          <Route path="/create-offer" element={< CreateOfferForm />} />
+          <Route path="/create-post" element={< CreatePost />} />
           <Route path="/logout" element={< Logout />} />
         </Routes>
         <SectionFooter />
