@@ -1,5 +1,12 @@
 .section {
-    padding: 10em;
+    padding: 0 10em;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.h2 {
+    margin-bottom: 3em;
+
 }
 
 .us_container {
@@ -16,4 +23,20 @@
     position: relative;
     font-size: 2em;
     padding: 0.5em;
+}
+
+.buttonsDiv {
+    margin: auto;
+    display: block;
+    margin-top: 5em;
+}
+
+.button,
+.buttons:hover {
+    text-decoration: none;
+    color: rgb(3, 3, 53);
+}
+
+.button {
+    margin-top: 5em;
 }

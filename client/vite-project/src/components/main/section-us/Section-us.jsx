@@ -13,14 +13,17 @@ export default function SectionUs() {
     const [request, setRequest] = useState([])
     const dataUrl = api.dataUrl
     const baseUrl = api.baseUrl
-    const isAuthenticated = useContext(AuthContext)
+    const { isAuthenticated } = useContext(AuthContext)
     const navigate = useNavigate()
 
     function register() {
         navigate("/register")
     }
-    function createOffer() {
-        navigate("/create-offer")
+    function login() {
+        navigate("/login")
+    }
+    function createPost() {
+        navigate("/create-post")
     }
     useEffect(() => {
 
@@ -62,7 +65,7 @@ export default function SectionUs() {
         < section className={style.section} >
 
             <div className="heading_container">
-                <h2>Why Choose Us</h2>
+                <h2 className={style.h2}>Why Choose Us</h2>
             </div>
             <div className={style.us_container}>
 
@@ -75,11 +78,15 @@ export default function SectionUs() {
             {isAuthenticated
                 ? (
 
-                    <button onClick={createOffer}>Create Post</button>
+                    <button className={style.button} onClick={createPost}>Create Post</button>
                 )
                 : (
-                    <button onClick={register}>Register</button>
+                    <div className={style.buttonsDiv}>
+                        <button className={style.buttons} onClick={register}>Register</button>
+                        <button className={style.buttons} onClick={login}>Login</button>
+                    </div>
                 )
+
 
             }
         </section >
