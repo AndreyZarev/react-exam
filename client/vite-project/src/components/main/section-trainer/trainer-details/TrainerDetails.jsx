@@ -50,20 +50,21 @@ export default function TrainerDetails() {
 
         })()
     }, []);
-
     function back() {
         navigate("/trainers")
     }
     async function like() {
         let like = Number(trainerDetails[6])
-        if (trainerDetails[7].hasOwnProperty(email)) {
+        let userEmail = email
+        if (trainerDetails[7] === userEmail) {
             like -= 1
+            userEmail = ""
         } else {
             like += 1
         }
         const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
 
-            trainerDetails[4], trainerDetails[5], like, email, headers, trainerid)
+            trainerDetails[4], trainerDetails[5], like, userEmail, headers, trainerid)
 
 
 
@@ -92,37 +93,52 @@ export default function TrainerDetails() {
                         <img className={style.img} src={trainerDetails[0]} alt="" />
 
                         <div className="phone">
-                            <h3>Phone:</h3>
-                            <p>{trainerDetails[2]}</p>
-                        </div>
+                            <h3 className={style.h3}>Phone: <span className={style.text}>{trainerDetails[2]}</span>
 
-                        <div className="experience">
-                            <h3>Experience:</h3>
-                            <p>{trainerDetails[4]}</p>
-                        </div>
-                        <div className="achievements">
-                            <h3>Achievements:</h3>
-                            <p>{trainerDetails[5]}</p>
-                        </div>
-                        <div className="likes">
-                            <h3>Likes:
-                                <span> {trainerDetails[6]}</span>
                             </h3>
                         </div>
 
+                        <div className="experience">
+                            <h3 className={style.h3}>Experience:</h3>
+                            <p className={style.text} >{trainerDetails[4]}</p>
+                        </div>
+                        <div className="achievements">
+                            <h3 className={style.h3}>Achievements:</h3>
+                            <p className={style.text}>{trainerDetails[5]}</p>
+                        </div>
+                        <div className="likes">
+                            <h3 className={style.h3}>Likes:
+                                <span className={style.text}> {trainerDetails[6]}</span>
+                            </h3>
+                        </div>
 
-                        <button className={style.button} onClick={like}>
+                        <div className={style.buttonDiv}>
+                            {
+                                trainerDetails[7] ?
+
+                                    <button className={style.button} onClick={like}>
+                                        Unlike
+
+                                    </button>
+
+                                    :
+
+                                    <button className={style.button} onClick={like}>
+                                        Like
+
+                                    </button>
+                            }
 
 
-                            Like
-
-                        </button>
-                        <button className={style.button} onClick={back}>
 
 
-                            Back
+                            <button className={style.button} onClick={back}>
 
-                        </button>
+
+                                Back
+
+                            </button>
+                        </div>
                     </div>
 
 
