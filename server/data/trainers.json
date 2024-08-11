@@ -6,7 +6,8 @@
         "_id": "2d5ae478-87c7-45fa-acf9-f04aa4724421",
         "experience": "Working as a personal trainer for 2 years. Expertize in woman bodybuiliding.",
         "achievments": "Second place in women bodybuiliding State Championship.",
-        "likes": "0"
+        "likes": "0",
+        "users": ""
     },
     "6012c542-38e1-4660-ba40-1b109c40cb2f": {
         "img": "https://www.healthkart.com/connect/wp-content/uploads/2016/05/banner-10-1.jpg",
@@ -15,7 +16,8 @@
         "_id": "6012c542-38e1-4660-ba40-1b109c40cb2f",
         "experience": "Working as a personal trainer for 1 years. Expertize calistetics.",
         "achievments": "First place in StreetFitness State Championship.",
-        "likes": "0"
+        "likes": "0",
+        "users": ""
     },
     "d749a819-1e41-4c65-9ce2-7b429c4ebd0d": {
         "img": "https://www.tialoto.bg/media/files/resized/article/615x348/1be/ea5f4a65fb59126b2764060a675a51be-istock-1267099167.jpg",
@@ -24,6 +26,7 @@
         "_id": "d749a819-1e41-4c65-9ce2-7b429c4ebd0d",
         "experience": "Working as a personal trainer for 5 years. Expertize in yoga.",
         "achievments": "Trained under the most famous names in the field.",
-        "likes": "0"
+        "likes": "0",
+        "users": ""
     }
 }
