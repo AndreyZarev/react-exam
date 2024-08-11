@@ -56,3 +56,15 @@
 
 
 }
+
+.buttonDiv {
+    display: flex;
+}
+
+.text {
+    color: black;
+}
+
+h3 {
+    padding-top: 1em;
+}
