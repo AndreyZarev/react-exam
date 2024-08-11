@@ -86,6 +86,12 @@ export default function TrainerDetails() {
                             <h3>Achievements:</h3>
                             <p>{trainerDetails[5]}</p>
                         </div>
+                        <div className="likes">
+                            <h3>Likes:
+                                <span> {Number(trainerDetails[6])}</span>
+                            </h3>
+                        </div>
+
 
 
                         <button className={style.button} onClick={back}>
