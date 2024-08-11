@@ -113,3 +113,23 @@ export const logoutF = async (headers) => {
     return authData
 }
 
+
+
+export async function likes(img, person, phone, _id, experience, achievments, likes, users, headers, trainerid) {
+
+    likes = Number(likes)
+    const authData = await fetch(`${base}/trainers/${trainerid}`, {
+        method: 'PUT',
+        headers: headers,
+        body: JSON.stringify({ img, person, phone, _id, experience, achievments, likes, users }),
+    });
+    const awaitedData = await authData.json();
+    if (!authData.ok) {
+
+        throw awaitedData
+
+    }
+
+
+    return awaitedData
+}
