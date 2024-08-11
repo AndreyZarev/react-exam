@@ -30,8 +30,8 @@
 
     background-color: rgb(196, 254, 255);
 
-    /* color: rgb(55, 69, 223); */
-    color: black;
+    color: rgb(55, 69, 223);
+    /* color: black; */
     border: 2px solid rgba(0, 0, 0, 0);
     font-size: 1.3em;
     font-weight: 700;
