@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import { likes } from "../../../../hooks/useFetch";
 import { AuthContext } from "../../../../contexts/Auth-context";
 
 import style from "./trainers-details.module.css"
@@ -54,6 +54,24 @@ export default function TrainerDetails() {
     function back() {
         navigate("/trainers")
     }
+    async function like() {
+        let like = Number(trainerDetails[6])
+        if (trainerDetails[7].hasOwnProperty(email)) {
+            like -= 1
+        } else {
+            like += 1
+        }
+        const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
+
+            trainerDetails[4], trainerDetails[5], like, email, headers, trainerid)
+
+
+
+
+        const result = (Object.values(data))
+        return setTrainerDetails(result)
+
+    }
 
 
     return (
@@ -88,12 +106,17 @@ export default function TrainerDetails() {
                         </div>
                         <div className="likes">
                             <h3>Likes:
-                                <span> {Number(trainerDetails[6])}</span>
+                                <span> {trainerDetails[6]}</span>
                             </h3>
                         </div>
 
 
+                        <button className={style.button} onClick={like}>
 
+
+                            Like
+
+                        </button>
                         <button className={style.button} onClick={back}>
 
 
