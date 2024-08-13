@@ -115,13 +115,14 @@ export const logoutF = async (headers) => {
 
 
 
-export async function likes(img, person, phone, _id, experience, achievments, likes, users, headers, trainerid) {
+export async function likes(img, person, phone, _id, experience, achievments, likes, users, liked, headers, trainerid) {
+    console.log(img, person, phone, _id, experience, achievments, likes, users, liked, headers, trainerid);
 
     likes = Number(likes)
     const authData = await fetch(`${base}/trainers/${trainerid}`, {
         method: 'PUT',
         headers: headers,
-        body: JSON.stringify({ img, person, phone, _id, experience, achievments, likes, users }),
+        body: JSON.stringify({ img, person, phone, _id, experience, achievments, likes, users, liked }),
     });
     const awaitedData = await authData.json();
     if (!authData.ok) {
