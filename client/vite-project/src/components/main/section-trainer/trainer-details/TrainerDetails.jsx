@@ -42,6 +42,7 @@ export default function TrainerDetails() {
             const data = await response.json()
 
             const result = (Object.values(data))
+
             return setTrainerDetails(result)
 
 
@@ -53,18 +54,44 @@ export default function TrainerDetails() {
     function back() {
         navigate("/trainers")
     }
+    let userEmails = ''
+    let convertedUsers = []
+    let isLiked = "notLiked"
+
     async function like() {
         let like = Number(trainerDetails[6])
-        let userEmail = email
-        if (trainerDetails[7] === userEmail) {
-            like -= 1
-            userEmail = ""
-        } else {
+
+        if (trainerDetails[7].length === 0) {
             like += 1
+            convertedUsers.push(email)
+            isLiked = "liked"
+        } else {
+            convertedUsers = trainerDetails[7]
+
+            userEmails = convertedUsers.find(userEmail => userEmail === email)
+            if (userEmails) {
+                like -= 1
+                convertedUsers = convertedUsers.filter(user => user !== userEmails)
+
+
+                isLiked = "notLiked"
+
+
+            } else {
+                like += 1
+                convertedUsers.push(email)
+                isLiked = "liked"
+            }
         }
+
+        console.log(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
+
+            trainerDetails[4], trainerDetails[5], like, convertedUsers, isLiked, headers, trainerid);
+
+
         const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
 
-            trainerDetails[4], trainerDetails[5], like, userEmail, headers, trainerid)
+            trainerDetails[4], trainerDetails[5], like, convertedUsers, isLiked, headers, trainerid)
 
 
 
@@ -114,7 +141,7 @@ export default function TrainerDetails() {
 
                         <div className={style.buttonDiv}>
                             {
-                                trainerDetails[7] ?
+                                trainerDetails[8] === "liked" ?
 
                                     <button className={style.button} onClick={like}>
                                         Unlike
