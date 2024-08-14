@@ -7,7 +7,9 @@
         "experience": "Working as a personal trainer for 2 years. Expertize in woman bodybuiliding.",
         "achievments": "Second place in women bodybuiliding State Championship.",
         "likes": "0",
-        "users": [],
+        "users": [
+            "users"
+        ],
         "liked": "notLiked"
     },
     "6012c542-38e1-4660-ba40-1b109c40cb2f": {
@@ -18,7 +20,9 @@
         "experience": "Working as a personal trainer for 1 years. Expertize calistetics.",
         "achievments": "First place in StreetFitness State Championship.",
         "likes": "0",
-        "users": [],
+        "users": [
+            "users"
+        ],
         "liked": "notLiked"
     },
     "d749a819-1e41-4c65-9ce2-7b429c4ebd0d": {
@@ -29,7 +33,9 @@
         "experience": "Working as a personal trainer for 5 years. Expertize in yoga.",
         "achievments": "Trained under the most famous names in the field.",
         "likes": "0",
-        "users": [],
+        "users": [
+            "users"
+        ],
         "liked": "notLiked"
     }
 }
