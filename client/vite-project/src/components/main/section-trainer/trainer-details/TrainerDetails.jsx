@@ -68,14 +68,14 @@ export default function TrainerDetails() {
     async function like() {
         let like = Number(trainerDetails[6])
 
-        if (trainerDetails[7].length === 0) {
+        if (trainerDetails[7]?.length === 0) {
             like += 1
             convertedUsers.push(email)
             isLiked = "liked"
         } else {
             convertedUsers = trainerDetails[7]
 
-            userEmails = convertedUsers.find(userEmail => userEmail === email)
+            userEmails = convertedUsers?.find(userEmail => userEmail === email)
             if (userEmails) {
                 like -= 1
                 convertedUsers = convertedUsers.filter(user => user !== userEmails)
@@ -86,24 +86,31 @@ export default function TrainerDetails() {
 
             } else {
                 like += 1
-                convertedUsers.push(email)
+                convertedUsers?.push(email)
                 isLiked = "liked"
             }
         }
 
 
 
-
-        const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
-
-            trainerDetails[4], trainerDetails[5], like, convertedUsers, isLiked, headers, trainerid)
+        try {
 
 
+            const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
+
+                trainerDetails[4], trainerDetails[5], like, convertedUsers, isLiked, headers, trainerid)
 
 
-        const result = (Object.values(data))
-        return setTrainerDetails(result)
 
+
+            const result = (Object.values(data))
+            return setTrainerDetails(result)
+        }
+        catch (err) {
+            console.log(err);
+
+
+        }
     }
 
 
