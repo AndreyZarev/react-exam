@@ -36,16 +36,23 @@ export default function TrainerDetails() {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(`${base}/trainers/${trainerid}`)
+            try {
+                const response = await fetch(`${base}/trainers/${trainerid}`)
 
+                if (!response.ok) {
+                    console.log("error from test implement");
+                    return
+                }
+                const data = await response.json()
 
-            const data = await response.json()
+                const result = (Object.values(data))
 
-            const result = (Object.values(data))
+                return setTrainerDetails(result)
 
-            return setTrainerDetails(result)
+            } catch (err) {
+                console.log(err.message);
 
-
+            }
 
 
 
@@ -84,9 +91,7 @@ export default function TrainerDetails() {
             }
         }
 
-        console.log(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
 
-            trainerDetails[4], trainerDetails[5], like, convertedUsers, isLiked, headers, trainerid);
 
 
         const data = await likes(trainerDetails[0], trainerDetails[1], trainerDetails[2], trainerDetails[3],
