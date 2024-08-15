@@ -32,7 +32,9 @@ export default function TrainerDetails() {
         headers['X-Authorization'] = accessToken;
     }
 
-
+    let isLiked = "notLiked"
+    let userEmails = ''
+    let convertedUsers = []
 
     useEffect(() => {
         (async () => {
@@ -47,8 +49,8 @@ export default function TrainerDetails() {
 
                 const result = (Object.values(data))
 
-                return setTrainerDetails(result)
 
+                return setTrainerDetails(result)
             } catch (err) {
                 console.log(err.message);
 
@@ -61,9 +63,7 @@ export default function TrainerDetails() {
     function back() {
         navigate("/trainers")
     }
-    let userEmails = ''
-    let convertedUsers = []
-    let isLiked = "notLiked"
+
 
     async function like() {
         let like = Number(trainerDetails[6])
@@ -112,8 +112,7 @@ export default function TrainerDetails() {
 
         }
     }
-
-
+    const hasUserLiked = trainerDetails[7]?.find(userEmail => userEmail === email);
     return (
         <><div className={style.videoContainer}>
             <div className={style.headers}>
@@ -158,7 +157,7 @@ export default function TrainerDetails() {
 
                             <div className={style.buttonDiv}>
                                 {
-                                    trainerDetails[8] === "liked" ?
+                                    trainerDetails[8] === "liked" && hasUserLiked ?
 
                                         <button className={style.button} onClick={like}>
                                             Unlike
