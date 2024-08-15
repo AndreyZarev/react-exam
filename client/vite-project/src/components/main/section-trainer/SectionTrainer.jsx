@@ -15,6 +15,8 @@ export default function SectionTrainer() {
             const response = await fetch(`${baseUrl}/trainers`)
             const data = await response.json()
             const result = (Object.values(data))
+
+
             return setTrainers(result)
 
 
