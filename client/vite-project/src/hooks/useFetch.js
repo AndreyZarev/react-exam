@@ -2,7 +2,6 @@
 import * as api from "../api/api-links"
 const base = api.baseUrl
 export const login = async (email, password, headers) => {
-    console.log(headers);
     const authData = await fetch("http://localhost:3030/users/login", {
         method: 'POST',
         headers: headers,
@@ -116,7 +115,6 @@ export const logoutF = async (headers) => {
 
 
 export async function likes(img, person, phone, _id, experience, achievments, likes, users, liked, headers, trainerid) {
-    console.log(img, person, phone, _id, experience, achievments, likes, users, liked, headers, trainerid);
 
     likes = Number(likes)
     const authData = await fetch(`${base}/trainers/${trainerid}`, {
