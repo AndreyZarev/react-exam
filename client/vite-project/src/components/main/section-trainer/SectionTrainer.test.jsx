@@ -46,7 +46,7 @@ describe("is dom rendered", () => {
 
     })
 
-    it("should have children - div element", async () => {
+    it("Does it render tainers in div element", async () => {
 
 
         const mockTrainers = [
@@ -73,9 +73,7 @@ describe("is dom rendered", () => {
 
 
         expect(names).toBeVisible()
-        // const children = flexContainer.children;
 
-        // expect(children).toHaveLength(mockTrainers.length);
     });
 
 
