@@ -1,0 +1,97 @@
+Structure:
+
+client__
+        /vite-project__
+                        /public
+                        /src__
+                              /api__
+                                    /api-links.js
+                              /assets__
+                                        /react.svg
+                              /components__
+                                            /css__
+                                                  /bootsrap.css 
+                                                  /responsive.css
+                                            /header__
+                                                     /header.css
+                                                     /Header.jsx
+                                                     /Header.test.jsx
+                                            /main__
+                                                    /create-post__
+                                                                  /create-post.module.css
+                                                                  /CreatePost.jsx
+                                                                  /CreatePost.test.jsx
+                                                    /delete__
+                                                             /Delete.jsx
+                                                    /edit__
+                                                            /Edit.jsx
+                                                            /edit.module.css
+                                                    /home__
+                                                            /Home.jsx
+                                                            /home.module.css
+                                                            /Home.test.jsx
+                                                    /section-healty__
+                                                                     /SectionHealty.jsx
+                                                                     /SectionHealty.test.jsx
+                                                    /section-info__
+                                                                   /section-info.module.css
+                                                                   /SectionInfo.jsx
+                                                                   /SectionInfo.test.jsx
+                                                    /section-trainer__
+                                                                      /trainer-details__
+                                                                                        /TrainerDetails.jsx
+                                                                                        /TrainerDetails.test.jsx
+                                                                                        /trainer-details.module.css
+                                                                        /trainers__
+                                                                                    /Trainers.jsx
+                                                                                    /trainers.module.css
+                                                                                    /Trainers.test.jsx 
+                                                                      /SectionTrainer.jsx 
+                                                                      /SectionTrainer.test.jsx  
+                                                    /section-us__
+                                                                 /section-us-article.module.css
+                                                                 /section-us.module.css
+                                                                 /SectionUs.jsx
+                                                                 /SectionUs.test.jsx
+                                                                 /SectionUsArticle.jsx
+                                                                 /SectionUsArticle.test.jsx
+                                                    /sections-auth__
+                                                                    /section-login__
+                                                                                    /SectionLogin.jsx
+                                                                                    /SectionLogin.jsx
+                                                                    /section-logout__
+                                                                                     /SectionLogout.jsx
+                                                                    /section-register__
+                                                                                       /SectionRegister.jsx
+                                                                                       /SectionRegister.test.jsx
+                                                                    auth.module.css
+                                                /zfooter__
+                                                           /footer.module.css
+                                                           /SectionFooter.jsx
+                                                           /SectionFooter.test.jsx
+                                                /WrongUrl.jsx
+                                                /WrongUrl.test.jsx
+                                /context__
+                                          /AuthContext.jsx
+                                /hooks__
+                                        /useAuth.jsx
+                                        /useFetch.js
+                                        /useForm.js
+                                /test-config__
+                                              /setup.js
+                                App.css
+                                App.jsx
+                                index.css
+                                main.jsx
+
+                        index.html
+                        package-lock.json
+                        package.json
+                        README.md
+                        vite.config.js
+
+server__data
+      __server.js
+
+README.md
+STRUCTURE.md

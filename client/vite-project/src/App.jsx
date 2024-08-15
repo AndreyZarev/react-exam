@@ -19,7 +19,7 @@ import WrongUrl from "./components/WrongUrl.jsx";
 import Logout from './components/main/sections-auth/section-logout/SectionLogout';
 import Edit from './components/main/edit/Edit';
 import DeletePost from './components/main/delete/Delete';
-import CreatePost from './components/main/create-offer/CreatePost';
+import CreatePost from './components/main/create-post/CreatePost.jsx';
 
 
 function App() {
