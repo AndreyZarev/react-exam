@@ -90,8 +90,9 @@ client__
                         README.md
                         vite.config.js
 
-server__data
-      __server.js
+server__
+        /data
+        /server.js
 
 README.md
 STRUCTURE.md
