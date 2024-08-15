@@ -62,34 +62,40 @@ export default function SectionUs() {
 
 
     return (
-        < section className={style.section} >
-
-            <div className="heading_container">
+        <><div className={style.videoContainer}>
+            <div className={style.headers}>
                 <h2 className={style.h2}>Why Choose Us</h2>
             </div>
-            <div className={style.us_container}>
-
-                {request.map(data => <SectionUsArticle key={data._id} {...data} />
-                )}
 
 
-            </div>
-
-            {isAuthenticated
-                ? (
-
-                    <button className={style.button} onClick={createPost}>Create Post</button>
-                )
-                : (
-                    <div className={style.buttonsDiv}>
-                        <button className={style.buttons} onClick={register}>Register</button>
-                        <button className={style.buttons} onClick={login}>Login</button>
-                    </div>
-                )
+        </div>
+            < section className={style.section} >
 
 
-            }
-        </section >
+                <div className={style.us_container}>
+
+                    {request.map(data => <SectionUsArticle key={data._id} {...data} />
+                    )}
+
+
+                </div>
+
+                {isAuthenticated
+                    ? (
+
+                        <button className={style.button} onClick={createPost}>Create Post</button>
+                    )
+                    : (
+                        <div className={style.buttonsDiv}>
+                            <button className={style.buttons} onClick={register}>Register</button>
+                            <button className={style.buttons} onClick={login}>Login</button>
+                        </div>
+                    )
+
+
+                }
+            </section >
+        </>
 
     )
 }
