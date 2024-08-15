@@ -16,7 +16,7 @@ export default function Home() {
         return (
 
 
-            <iframe className={style.video} width="1036" height="583" src="https://www.youtube.com/embed/Yko3GMseY40" title="Sony A7IV Cinematic FITNESS VIDEO Featuring FE 16-35mm Power zoom - FE 4/PZ A7m4 Footage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className={style.video} width="1036" height="583" src="https://www.youtube.com/embed/Yko3GMseY40" title="Sony A7IV Cinematic FITNESS VIDEO Featuring FE 16-35mm Power zoom - FE 4/PZ A7m4 Footage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
         );
     };
