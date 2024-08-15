@@ -115,77 +115,82 @@ export default function TrainerDetails() {
 
 
     return (
-        <section className={style.section}>
-            <div className={style.container}>
-                <div className="heading-container">
-                    <h2 className={style.title}>One of our Gym Trainers</h2>
-                </div>
-
-                <div className={style.row}>
-                    <div className="">
-
-
-                        <div className="name">
-                            <h3 className={style.name}>{trainerDetails[1]}</h3>
-                        </div>
-
-                        <img className={style.img} src={trainerDetails[0]} alt="" />
-
-                        <div className="phone">
-                            <h3 className={style.h3}>Phone: <span className={style.text}>{trainerDetails[2]}</span>
-
-                            </h3>
-                        </div>
-
-                        <div className="experience">
-                            <h3 className={style.h3}>Experience:</h3>
-                            <p className={style.text} >{trainerDetails[4]}</p>
-                        </div>
-                        <div className="achievements">
-                            <h3 className={style.h3}>Achievements:</h3>
-                            <p className={style.text}>{trainerDetails[5]}</p>
-                        </div>
-                        <div className="likes">
-                            <h3 className={style.h3}>Likes:
-                                <span className={style.text}> {trainerDetails[6]}</span>
-                            </h3>
-                        </div>
-
-                        <div className={style.buttonDiv}>
-                            {
-                                trainerDetails[8] === "liked" ?
-
-                                    <button className={style.button} onClick={like}>
-                                        Unlike
-
-                                    </button>
-
-                                    :
-
-                                    <button className={style.button} onClick={like}>
-                                        Like
-
-                                    </button>
-                            }
-
-
-
-
-                            <button className={style.button} onClick={back}>
-
-
-                                Back
-
-                            </button>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
+        <><div className={style.videoContainer}>
+            <div className={style.headers}>
+                <h2 className={style.h2}>One of our Gym Trainers</h2>
             </div>
-        </section>
 
+
+        </div>
+            <section className={style.section}>
+                <div className={style.container}>
+
+
+                    <div className={style.row}>
+                        <div className="">
+
+
+                            <div className="name">
+                                <h3 className={style.name}>{trainerDetails[1]}</h3>
+                            </div>
+
+                            <img className={style.img} src={trainerDetails[0]} alt="" />
+
+                            <div className="phone">
+                                <h3 className={style.h3}>Phone: <span className={style.text}>{trainerDetails[2]}</span>
+
+                                </h3>
+                            </div>
+
+                            <div className="experience">
+                                <h3 className={style.h3}>Experience:</h3>
+                                <p className={style.text} >{trainerDetails[4]}</p>
+                            </div>
+                            <div className="achievements">
+                                <h3 className={style.h3}>Achievements:</h3>
+                                <p className={style.text}>{trainerDetails[5]}</p>
+                            </div>
+                            <div className="likes">
+                                <h3 className={style.h3}>Likes:
+                                    <span className={style.text}> {trainerDetails[6]}</span>
+                                </h3>
+                            </div>
+
+                            <div className={style.buttonDiv}>
+                                {
+                                    trainerDetails[8] === "liked" ?
+
+                                        <button className={style.button} onClick={like}>
+                                            Unlike
+
+                                        </button>
+
+                                        :
+
+                                        <button className={style.button} onClick={like}>
+                                            Like
+
+                                        </button>
+                                }
+
+
+
+
+                                <button className={style.button} onClick={back}>
+
+
+                                    Back
+
+                                </button>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }

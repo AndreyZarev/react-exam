@@ -29,18 +29,22 @@ export default function SectionTrainer() {
 
 
     return (
-
-        <section className="trainer-section">
-            <div className="heading-container">
-                <h2 className="ourGym">Our Gym Trainers</h2>
-            </div>
-            <div className="flex-container">
-                {trainers.map(trainer => <Trainers key={trainer._id} {...trainer} />
-                )}
+        <><div className="videoContainer">
+            <div className="headers">
+                <h2 className="h2">Our Gym Trainers</h2>
             </div>
 
 
-        </section>
+        </div>
+            <section className="trainer-section">
 
+                <div className="flex-container">
+                    {trainers.map(trainer => <Trainers key={trainer._id} {...trainer} />
+                    )}
+                </div>
+
+
+            </section>
+        </>
     )
 }
