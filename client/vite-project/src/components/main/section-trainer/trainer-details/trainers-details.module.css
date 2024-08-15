@@ -41,6 +41,30 @@
 
 }
 
+.videoContainer {
+    background: url(https://images.jhtassets.com/cd844b927db765797131b59721fdd7458666f3b9/);
+    padding: 2em;
+    margin: 0;
+    margin-top: -15em;
+    margin-bottom: 5em;
+    border: 2px solid black;
+
+
+}
+
+.h2 {
+    border: 2px solid black;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.747);
+    width: 15em;
+
+    color: black;
+    font-weight: 700;
+    margin: 4.88em auto;
+
+}
+
 .button {
     display: block;
     margin: 1em auto;

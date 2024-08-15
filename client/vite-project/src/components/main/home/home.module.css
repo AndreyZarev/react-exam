@@ -1,55 +1,92 @@
-.section {
-    display: block;
-    margin: 0 auto;
-    padding: 0 15em;
-    border: 1px solid black;
-    padding: 2em 10em 5em 5em;
-
-
-}
-
 .textP {
     font-size: 1.3em;
     margin: 2em 0;
 }
 
-.video {
-    display: block;
-    margin: 2em auto;
-}
+
 
 .headers {
-    border: 2px solid black;
+    margin: 5em auto;
 }
 
 .first,
 .second,
 .third {
-    display: block;
+    border: 2px solid black;
     text-align: center;
     padding: 0.5em;
-    background-color: rgb(196, 254, 255);
-    color: rgb(55, 69, 223);
+    background-color: rgba(255, 255, 255, 0.747);
 
+    color: black;
+    font-weight: 700;
 }
 
 .first {
-
+    width: 10em;
     margin: 0 auto;
+    border-bottom: none;
+
 }
 
 .second {
+    width: 15em;
+    border-bottom: none;
 
     margin: 0 auto;
 }
 
 .third {
-    /* background-color: rgb(82, 243, 255); */
-    color: black;
+    width: 20em;
+
     margin: 0 auto;
 }
 
+.videoContainer {
+    background: url(https://images.jhtassets.com/cd844b927db765797131b59721fdd7458666f3b9/);
+    padding: 2em;
+    margin: 0;
+    margin-top: -15em;
+    border: 2px solid black;
+
+
+}
+
+.video {
+    display: block;
+    margin: 5em auto;
+
+}
+
+.section {
+
+    border: 1px solid black;
+
+    background: url(https://images.jhtassets.com/cd844b927db765797131b59721fdd7458666f3b9/);
+
+
+
+}
+
+.divS {
+    display: block;
+    margin: 2em 30%;
+    padding: 2em;
+    font-size: 1.3em;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.747);
+
+}
+
 .buttonDiv {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em;
+
+}
+
+.buttons {
     display: block;
     margin: 0 auto;
+    font-size: 1.3em;
+
 }
