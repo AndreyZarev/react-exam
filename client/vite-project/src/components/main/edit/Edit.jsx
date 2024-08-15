@@ -26,11 +26,7 @@ export default function Edit() {
         headers['X-Authorization'] = accessToken;
     }
 
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate("/login");
-        }
-    }, [isAuthenticated, navigate]);
+
 
     useEffect(() => {
         (async () => {
@@ -43,7 +39,11 @@ export default function Edit() {
                 console.error("Failed to fetch post details:", err);
             }
         })();
-    }, []);
+
+        if (!isAuthenticated) {
+            navigate("/login");
+        }
+    }, [isAuthenticated, navigate]);
 
     const updateFunction = async (values) => {
         try {
@@ -57,7 +57,7 @@ export default function Edit() {
     const { values, changeHandler, submitHandler } = useForm(postDetails || { img: "", title: "", text: "" }, updateFunction);
 
     if (!postDetails) {
-        return <div>Loading...</div>;
+        return <div className={style.loading}>Loading...</div>;
     }
 
     return (
