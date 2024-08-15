@@ -6,7 +6,7 @@ export default function SectionHealty() {
                 <div className="row">
                     <div className="col-md-12 mx-auto">
                         <div className="detail-box">
-                            <h2>HEALTHY MIND, HEALTHY BODY</h2>
+                            <h2>Healty Mind, Healty Body!</h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -19,9 +19,7 @@ export default function SectionHealty() {
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit
                                 esse cillum
                             </p>
-                            <div className="btn-box">
-                                <a href="">READ MORE</a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
