@@ -2,12 +2,12 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-import { useLogin } from '../../../hooks/useAuth';
-import { useForm } from '../../../hooks/useForm';
+import { useLogin } from '../../../../hooks/useAuth';
+import { useForm } from '../../../../hooks/useForm';
 import { useState } from 'react';
 import { useContext } from "react";
-import style from "./auth.module.css"
-import { AuthContext } from "../../../contexts/Auth-context";
+import style from "../auth.module.css"
+import { AuthContext } from "../../../../contexts/Auth-context";
 
 
 

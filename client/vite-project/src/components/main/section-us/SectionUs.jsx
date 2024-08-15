@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../../../contexts/Auth-context"
 
 import * as api from "../../../api/api-links"
-import SectionUsArticle from "./Section-us-article"
+import SectionUsArticle from "./SectionUsArticle"
 import style from "./section-us.module.css"
 
 export default function SectionUs() {

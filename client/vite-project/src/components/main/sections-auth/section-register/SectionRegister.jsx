@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useForm } from "../../../hooks/useForm"
-import { useRegister } from "../../../hooks/useAuth";
+import { useForm } from "../../../../hooks/useForm"
+import { useRegister } from "../../../../hooks/useAuth";
 import { useState } from "react";
-import { AuthContext } from "../../../contexts/Auth-context";
+import { AuthContext } from "../../../../contexts/Auth-context";
 import { useContext } from "react";
-import style from "./auth.module.css"
+import style from "../auth.module.css"
 
 const initialValues = { email: '', password: '', rePassword: '' };
 
