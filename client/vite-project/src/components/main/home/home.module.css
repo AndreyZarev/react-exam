@@ -1,20 +1,55 @@
 .section {
-    display: flex;
+    display: block;
     margin: 0 auto;
     padding: 0 15em;
-}
-
-.img {
-    height: 35em;
-    width: auto;
-}
-
-.text {
     border: 1px solid black;
     padding: 2em 10em 5em 5em;
+
+
 }
 
 .textP {
     font-size: 1.3em;
     margin: 2em 0;
+}
+
+.video {
+    display: block;
+    margin: 2em auto;
+}
+
+.headers {
+    border: 2px solid black;
+}
+
+.first,
+.second,
+.third {
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    background-color: rgb(196, 254, 255);
+    color: rgb(55, 69, 223);
+
+}
+
+.first {
+
+    margin: 0 auto;
+}
+
+.second {
+
+    margin: 0 auto;
+}
+
+.third {
+    /* background-color: rgb(82, 243, 255); */
+    color: black;
+    margin: 0 auto;
+}
+
+.buttonDiv {
+    display: block;
+    margin: 0 auto;
 }
