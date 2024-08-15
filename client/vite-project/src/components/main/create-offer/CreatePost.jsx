@@ -57,7 +57,7 @@ export default function CreatePost() {
             <section className={style.section}>
 
                 <div className="heading_container">
-                    <h2 className={style.title}>Create Offer</h2>
+                    <h2 className={style.title}>Create Post</h2>
                     <h4 className="errorMessage" style={{ color: "red" }}>{error}</h4>
                 </div>
 
